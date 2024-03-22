@@ -15,6 +15,18 @@
 **Действительность:**
 * Экран не открывается, при загрузке данных возникает ошибка: PSQLException: ERROR: syntax error at or near ")" Position: 80
 
+### PSQLException
+Internal Exception: org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
+
+Position: 80
+
+Error Code: 0
+
+Call: SELECT ID, DELETED_BY, DELETED_DATE, NAME, ORDER_ FROM DIVISION WHERE ((ID IN ()) AND (0=0))
+
+Query: ReadAllQuery(name="branch" referenceClass=Division sql="SELECT ID, DELETED_BY, DELETED_DATE, NAME, ORDER_ FROM DIVISION WHERE ((ID IN ?) AND (0=0))")
+FetchGroup(branch){deletedDate, name, id, deletedBy, order}
+
 ### Какое должно быть наполнение сущностей для воспроизведения ошибки:
 * Исследование производилось на довольно сложной модели сущностей. Есть вероятность, что ошибку можно воспроизвести на более простом варианте - это не проверялось. Ниже будут описаны основные, на мой взгляд, моменты.
 * Нужно несколько связанных сущностей, имеющих ссылочный атрибут одинакового типа (в проекте это ChairHistory и ChairActual, имеют атрибут Division).
