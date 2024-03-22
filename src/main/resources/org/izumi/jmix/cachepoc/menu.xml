@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://jmix.io/schema/ui/menu">
+
+    <item screen="ChairHeader.browse"
+          caption="msg://org.izumi.jmix.cachepoc.screen.chairheader/chairHeaderBrowse.menu"/>
+    <item screen="GeneratorScreen"
+          caption="msg://org.izumi.jmix.cachepoc.screen.generator/generatorScreen.caption"/>
+    <item screen="Division.browse" caption="msg://org.izumi.jmix.cachepoc.screen.division/divisionBrowse.menu"/>
+
+</menu-config>
